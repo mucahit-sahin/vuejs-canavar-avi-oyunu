@@ -22,7 +22,8 @@ new Vue({
             this.monster_heal-=monsterDamage
         },
         heal_up:function(){
-
+            let heal=Math.ceil(Math.random()*15)
+            this.player_heal+=heal
         },
         give_up:function(){
             
