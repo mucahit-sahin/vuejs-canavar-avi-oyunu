@@ -10,7 +10,10 @@ new Vue({
             this.game_is_on=true
         },
         attack:function(){
-
+            let playerDamage= Math.ceil(Math.random()*10)
+            this.player_heal-=playerDamage
+            let monsterDamage= Math.ceil(Math.random()*15)
+            this.monster_heal-=monsterDamage
         },
         special_attack:function(){
 
