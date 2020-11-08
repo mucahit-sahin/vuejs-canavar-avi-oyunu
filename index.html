@@ -12,16 +12,16 @@
         <div class="small-6 columns">
             <h1 class="text-center">SEN</h1>
             <div class="healthbar" >
-                <div :style={width:player_heal+"%"} class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-                    {{player_heal}}
+                <div :style={width:player_healt+"%"} class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
+                    {{player_healt}}
                 </div>
             </div>
         </div>
         <div class="small-6 columns">
             <h1 class="text-center">CANAVAR</h1>
             <div class="healthbar">
-                <div :style={width:monster_heal+"%"} class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-                    {{monster_heal}}
+                <div :style={width:monster_healt+"%"} class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
+                    {{monster_healt}}
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <button id="give-up" @click="give_up">PES ET!</button>
         </div>
     </section>
-    <section class="row log"  v-if="game_is_on">
+    <section class="row log"  v-if="logs.length>0">
         <div class="small-12 columns">
             <ul >
                 <li :class="{'player-turn':log.side=='p','monster-turn':log.side=='m'}" 
